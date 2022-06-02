@@ -33,13 +33,9 @@ class Menu {
                 case "4":
                     least_profitable_stock()
                 case "5":
-                    print("|||||||||||||||||||||||||||||||||||||||||||||")
-                    print("||   maybe you expect me to do something   ||")
-                    print("|||||||||||||||||||||||||||||||||||||||||||||")
+                    get_sorted_stock(by:"name", asc:true)
                 case "6":
-                    print("|||||||||||||||||||||||||||||||||||||||||||||")
-                    print("||        that's a lot of pressure         ||")
-                    print("|||||||||||||||||||||||||||||||||||||||||||||")
+                    get_sorted_stock(by:"price", asc:nil)
                 case "7":
                     self.exit()
                 default:
@@ -207,6 +203,60 @@ class Menu {
                 print("Value In Dollars: \(obj.valueInDollars())")
             }
         }
+        print("|||||||||||||||||||||||||||||||||||||||||||||")
+        print("Press enter to continue")
+        readLine()
+    }
+    
+    func get_sorted_stock(by: String, asc: Bool?) {
+        var sorted_arr: NSMutableArray = []
+        var cur_arr = [Int]()
+        for i in 0..<store.count{
+            cur_arr.append(i)
+        }
+        while cur_arr.count > 0 {
+            var pointer = 0
+            for idx in cur_arr {
+                if let obj = store[idx] as? StockHolding {
+                    if let test_obj = store[pointer] as? StockHolding {
+                        if by == "price" {
+                            if obj.price < test_obj.price {
+                                pointer = idx
+                            }
+                        } else if by == "name" {
+                            if obj.name.caseInsensitiveCompare(test_obj.name) == ((asc!) ? .orderedAscending : .orderedDescending) {
+                                pointer = idx
+                            }
+                        }
+                    }
+                }
+            }
+            sorted_arr.add(store[cur_arr[pointer]])
+            cur_arr.remove(at: pointer)
+        }
+        
+        for item in sorted_arr {
+            if let obj = item as? ForeignStockHolding {
+                print("|||||||||||||||||||||||||||||||||||||||||||||")
+                print("Name: \(obj.name)")
+                print("Share price: \(obj.price)")
+                print("Purchasing price: \(obj.p_price)")
+                print("total shares: \(obj.holding)")
+                print("Cost In Dollars: \(obj.costInDollars())")
+                print("Value In Dollars: \(obj.valueInDollars())")
+            } else {
+                if let obj = item as? StockHolding {
+                    print("|||||||||||||||||||||||||||||||||||||||||||||")
+                    print("Name: \(obj.name)")
+                    print("Share price: \(obj.price)")
+                    print("Purchasing price: \(obj.p_price)")
+                    print("total shares: \(obj.holding)")
+                    print("Cost In Dollars: \(obj.costInDollars())")
+                    print("Value In Dollars: \(obj.valueInDollars())")
+                }
+            }
+        }
+        
         print("|||||||||||||||||||||||||||||||||||||||||||||")
         print("Press enter to continue")
         readLine()
