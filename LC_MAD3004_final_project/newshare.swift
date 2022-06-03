@@ -31,33 +31,44 @@ class NewShare {
                                     let choice = readLine()
                                     if choice == "y" {
                                         save_stock(name,double_price,double_p_price,int_amount)
+                                        print("|||||||||||||||||||||||||||||||||||||||||||||")
+                                        print("||         share added successfully        ||")
                                     } else if choice == "n" {
                                         print("Conversion rate: ")
                                         let rate = readLine()
                                         if let float_rate = Float(rate!){
                                             save_foreign_stock(name,double_price,double_p_price,int_amount,float_rate)
+                                            
+                                            print("|||||||||||||||||||||||||||||||||||||||||||||")
+                                            print("||         share added successfully        ||")
                                         } else {
-                                            print("ERROR! Please enter a decimal")
+                                            print("|||||||||||||||||||||||||||||||||||||||||||||")
+                                            print("||          Please enter a decimal         ||")
                                             //break
                                             
                                         }
                                     } else {
-                                        print("Invalid Choice Please Try again")
+                                        print("|||||||||||||||||||||||||||||||||||||||||||||")
+                                        print("||     Invalid Choice Please Try again     ||")
                                     }
                                 } else {
-                                    print("Amount must be a integer")
+                                    print("|||||||||||||||||||||||||||||||||||||||||||||")
+                                    print("||         Amount must be a integer        ||")
                                     //continue
                                 }
                             } else {
-                                print("Please enter a decimal")
+                                print("|||||||||||||||||||||||||||||||||||||||||||||")
+                                print("||          Please enter a decimal         ||")
                                 //continue
                             }
                         } else {
-                            print("Please enter a decimal")
+                            print("|||||||||||||||||||||||||||||||||||||||||||||")
+                            print("||          Please enter a decimal         ||")
                             //continue
                         }
                     } else {
-                        print("Share for that company already exists")
+                        print("|||||||||||||||||||||||||||||||||||||||||||||")
+                        print("||  Share for that company already exists  ||")
                         //continue
                     }
                 }
@@ -69,8 +80,7 @@ class NewShare {
         }
         */
         
-        print("|||||||||||||||||||||||||||||||||||||||||||||")
-        print("||              Shares Added               ||")
+        print("||               Going Back                ||")
         print("|||||||||||||||||||||||||||||||||||||||||||||")
     }
     
