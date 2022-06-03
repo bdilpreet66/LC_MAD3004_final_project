@@ -9,10 +9,10 @@
 /* Begin PBXBuildFile section */
 		233075D42847C80D0080B88B /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233075D32847C80D0080B88B /* main.swift */; };
 		233075DB2847C8270080B88B /* application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233075DA2847C8270080B88B /* application.swift */; };
-		233075DD2847C8F40080B88B /* stocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233075DC2847C8F40080B88B /* stocks.swift */; };
-		233075DF2847C93F0080B88B /* foriegn_stocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233075DE2847C93F0080B88B /* foriegn_stocks.swift */; };
+		233075DD2847C8F40080B88B /* stockholding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233075DC2847C8F40080B88B /* stockholding.swift */; };
+		233075DF2847C93F0080B88B /* foreignstockholding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233075DE2847C93F0080B88B /* foreignstockholding.swift */; };
 		233075E128483FFC0080B88B /* menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233075E028483FFC0080B88B /* menu.swift */; };
-		233075E3284850490080B88B /* add_shares.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233075E2284850490080B88B /* add_shares.swift */; };
+		233075E3284850490080B88B /* newshare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233075E2284850490080B88B /* newshare.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,10 +31,10 @@
 		233075D02847C80D0080B88B /* LC_MAD3004_final_project */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LC_MAD3004_final_project; sourceTree = BUILT_PRODUCTS_DIR; };
 		233075D32847C80D0080B88B /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		233075DA2847C8270080B88B /* application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = application.swift; sourceTree = "<group>"; };
-		233075DC2847C8F40080B88B /* stocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stocks.swift; sourceTree = "<group>"; };
-		233075DE2847C93F0080B88B /* foriegn_stocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = foriegn_stocks.swift; sourceTree = "<group>"; };
+		233075DC2847C8F40080B88B /* stockholding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stockholding.swift; sourceTree = "<group>"; };
+		233075DE2847C93F0080B88B /* foreignstockholding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = foreignstockholding.swift; sourceTree = "<group>"; };
 		233075E028483FFC0080B88B /* menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = menu.swift; sourceTree = "<group>"; };
-		233075E2284850490080B88B /* add_shares.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = add_shares.swift; sourceTree = "<group>"; };
+		233075E2284850490080B88B /* newshare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newshare.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,9 +70,9 @@
 				233075E028483FFC0080B88B /* menu.swift */,
 				233075D32847C80D0080B88B /* main.swift */,
 				233075DA2847C8270080B88B /* application.swift */,
-				233075DC2847C8F40080B88B /* stocks.swift */,
-				233075DE2847C93F0080B88B /* foriegn_stocks.swift */,
-				233075E2284850490080B88B /* add_shares.swift */,
+				233075DC2847C8F40080B88B /* stockholding.swift */,
+				233075DE2847C93F0080B88B /* foreignstockholding.swift */,
+				233075E2284850490080B88B /* newshare.swift */,
 			);
 			path = LC_MAD3004_final_project;
 			sourceTree = "<group>";
@@ -137,10 +137,10 @@
 			files = (
 				233075DB2847C8270080B88B /* application.swift in Sources */,
 				233075D42847C80D0080B88B /* main.swift in Sources */,
-				233075DD2847C8F40080B88B /* stocks.swift in Sources */,
-				233075E3284850490080B88B /* add_shares.swift in Sources */,
+				233075DD2847C8F40080B88B /* stockholding.swift in Sources */,
+				233075E3284850490080B88B /* newshare.swift in Sources */,
 				233075E128483FFC0080B88B /* menu.swift in Sources */,
-				233075DF2847C93F0080B88B /* foriegn_stocks.swift in Sources */,
+				233075DF2847C93F0080B88B /* foreignstockholding.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
