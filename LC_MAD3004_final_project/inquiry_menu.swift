@@ -1,6 +1,5 @@
 import Foundation
 
-
 class Menu {
     var flag: Bool
     
