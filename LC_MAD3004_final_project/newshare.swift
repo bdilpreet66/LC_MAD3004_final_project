@@ -6,13 +6,14 @@ class NewShare {
         print("||               Add Shares                ||")
         print("|||||||||||||||||||||||||||||||||||||||||||||")
         
-        print("\nPlease enter the no of shares you want to add: ")
+        //print("\nPlease enter the no of shares you want to add: ")
         
-        let input = readLine()
+        /*let input = readLine()
         if let int_input = Int(input!) {
             var stock_no = 1
             while stock_no <= int_input {
                 print("\n Enter details for share # \(stock_no)")
+                */
                 print("Company Name: ")
                 if let name = readLine() {
                     // check if the share exists or not
@@ -20,10 +21,10 @@ class NewShare {
                         print("Current Price: ")
                         let price = readLine()
                         if let double_price = Double(price!){
-                            print("purchasing Price: ")
+                            print("Purchasing Price: ")
                             let p_price = readLine()
                             if let double_p_price = Double(p_price!){
-                                print("Amount: ")
+                                print("No of Shares: ")
                                 let amount = readLine()
                                 if let int_amount = Int(amount!){
                                     print("Is th price in local curreny[y] or not[n]")
@@ -37,7 +38,7 @@ class NewShare {
                                             save_foreign_stock(name,double_price,double_p_price,int_amount,float_rate)
                                         } else {
                                             print("ERROR! Please enter a decimal")
-                                            break
+                                            //break
                                             
                                         }
                                     } else {
@@ -45,27 +46,28 @@ class NewShare {
                                     }
                                 } else {
                                     print("Amount must be a integer")
-                                    continue
+                                    //continue
                                 }
                             } else {
                                 print("Please enter a decimal")
-                                continue
+                                //continue
                             }
                         } else {
                             print("Please enter a decimal")
-                            continue
+                            //continue
                         }
                     } else {
-                        print("Share already exists")
-                        continue
+                        print("Share for that company already exists")
+                        //continue
                     }
                 }
+                /*
                 stock_no += 1
             }
         } else {
             print("ERROR! Please enter integer value")
         }
-        
+        */
         
         print("|||||||||||||||||||||||||||||||||||||||||||||")
         print("||              Shares Added               ||")

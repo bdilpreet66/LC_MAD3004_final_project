@@ -13,23 +13,23 @@ class Application {
         // Initialize the store with some data
         store = [
             StockHolding(name: "A", price: 10.0, p_price: 8.0, holding: 5),
-            StockHolding(name: "B", price: 10.0, p_price: 8.0, holding: 5),
+            StockHolding(name: "B", price: 8.0, p_price: 8.0, holding: 5),
             StockHolding(name: "C", price: 10.0, p_price: 8.0, holding: 5),
-            StockHolding(name: "D", price: 30.0, p_price: 20.0, holding: 5),
-            StockHolding(name: "E", price: 10.0, p_price: 8.0, holding: 5),
-            StockHolding(name: "F", price: 10.0, p_price: 8.0, holding: 5),
-            StockHolding(name: "G", price: 10.0, p_price: 8.0, holding: 5),
-            StockHolding(name: "H", price: 10.0, p_price: 8.0, holding: 5),
-            StockHolding(name: "I", price: 10.0, p_price: 8.0, holding: 5),
-            StockHolding(name: "J", price: 10.0, p_price: 8.0, holding: 5),
+            StockHolding(name: "D", price: 5.0, p_price: 20.0, holding: 5),
+            StockHolding(name: "E", price: 4.5, p_price: 8.0, holding: 5),
+            StockHolding(name: "F", price: 8.0, p_price: 8.0, holding: 5),
+            StockHolding(name: "G", price: 9.0, p_price: 8.0, holding: 5),
+            StockHolding(name: "H", price: 11.0, p_price: 8.0, holding: 5),
+            StockHolding(name: "I", price: 12.0, p_price: 8.0, holding: 5),
+            StockHolding(name: "J", price: 13.0, p_price: 8.0, holding: 5),
         ]
         
 //        sortArray(asc:true)
                 
         // add more data too the store
-        store.add(ForeignStockHolding(name: "K", price: 10.0, p_price: 8.0, holding: 5, rate: 1.3))
-        store.add(ForeignStockHolding(name: "L", price: 10.0, p_price: 8.0, holding: 5, rate: 1.4))
-        store.add(ForeignStockHolding(name: "M", price: 1.0, p_price: 0.5, holding: 5, rate: 1.2))
+        store.add(ForeignStockHolding(name: "K", price: 10.0, p_price: 8.0, holding: 5, rate: 39.0))
+        store.add(ForeignStockHolding(name: "L", price: 10.0, p_price: 8.0, holding: 5, rate: 39.0))
+        store.add(ForeignStockHolding(name: "M", price: 1.0, p_price: 0.5, holding: 5, rate: 39.0))
         
 //        sortArray(asc:false)
     }
@@ -37,12 +37,12 @@ class Application {
     func run() {
         while self.flag {
             print("********************************************")
-            print("********************************************")
+            print("******************* HOME *******************")
             print("********************************************\n")
-            print("Choose An task you want to perform: ")
+            print("Choose a task you want to perform: ")
             print("1. Add Share")
             print("2. Inquire Stocks")
-            print("3. exit")
+            print("3. Exit")
             let input = readLine()
             switch input {
                 case "1":
@@ -52,12 +52,12 @@ class Application {
                 case "3":
                 self.exit() // exit app
                 default:
-                    print("\n\nPlease Try again",terminator: "\n\n")
+                    print("\n\nPlease try again",terminator: "\n\n")
             }
         }
         print("********************************************")
         print("********************************************")
-        print("******************* Bye ********************")
+        print("***************** Goodbye! *****************")
         print("********************************************")
         print("********************************************",terminator:"\n\n\n\n\n\n\n")
     }
