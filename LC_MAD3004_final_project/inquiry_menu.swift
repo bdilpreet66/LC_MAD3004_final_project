@@ -43,7 +43,6 @@ class Menu {
             }
         }
         
-        
         print("|||||||||||||||||||||||||||||||||||||||||||||")
         print("||               going back                ||")
         print("|||||||||||||||||||||||||||||||||||||||||||||")
@@ -57,8 +56,22 @@ class Menu {
         print("\n|||||||||||||||||||||||||||||||||||||||||||||")
         var s_obj = store[0]
         for c_item in store{
-            if let obj = c_item as? StockHolding {
-                if let smallest = s_obj as? StockHolding{
+            if let obj = c_item as? ForeignStockHolding {
+                if let smallest = s_obj as? ForeignStockHolding{
+                    if (obj.price - obj.p_price) * Double(obj.holding) * Double(obj.rate) < (smallest.price - smallest.p_price) * Double(smallest.holding) * Double(smallest.rate) {
+                        s_obj = obj
+                    }
+                } else if let smallest = s_obj as? StockHolding{
+                    if (obj.price - obj.p_price) * Double(obj.holding) < (smallest.price - smallest.p_price) * Double(smallest.holding) {
+                        s_obj = obj
+                    }
+                }
+            } else if let obj = c_item as? StockHolding {
+                if let smallest = s_obj as? ForeignStockHolding{
+                    if (obj.price - obj.p_price) * Double(obj.holding) < (smallest.price - smallest.p_price) * Double(smallest.holding) * Double(smallest.rate) {
+                        s_obj = obj
+                    }
+                } else if let smallest = s_obj as? StockHolding{
                     if (obj.price - obj.p_price) * Double(obj.holding) < (smallest.price - smallest.p_price) * Double(smallest.holding) {
                         s_obj = obj
                     }
@@ -98,8 +111,22 @@ class Menu {
         print("\n|||||||||||||||||||||||||||||||||||||||||||||")
         var l_obj = store[0]
         for c_item in store{
-            if let obj = c_item as? StockHolding {
-                if let largest = l_obj as? StockHolding{
+            if let obj = c_item as? ForeignStockHolding {
+                if let largest = l_obj as? ForeignStockHolding{
+                    if (obj.price - obj.p_price) * Double(obj.holding) * Double(obj.rate) > (largest.price - largest.p_price) * Double(largest.holding) * Double(largest.rate) {
+                        l_obj = obj
+                    }
+                } else if let largest = l_obj as? StockHolding{
+                    if (obj.price - obj.p_price) * Double(obj.holding) > (largest.price - largest.p_price) * Double(largest.holding) {
+                        l_obj = obj
+                    }
+                }
+            } else if let obj = c_item as? StockHolding {
+                if let largest = l_obj as? ForeignStockHolding{
+                    if (obj.price - obj.p_price) * Double(obj.holding) > (largest.price - largest.p_price) * Double(largest.holding) * Double(largest.rate) {
+                        l_obj = obj
+                    }
+                } else if let largest = l_obj as? StockHolding{
                     if (obj.price - obj.p_price) * Double(obj.holding) > (largest.price - largest.p_price) * Double(largest.holding) {
                         l_obj = obj
                     }
@@ -136,9 +163,23 @@ class Menu {
         print("\n|||||||||||||||||||||||||||||||||||||||||||||")
         var l_obj = store[0]
         for c_item in store{
-            if let obj = c_item as? StockHolding {
-                if let largest = l_obj as? StockHolding{
-                    if obj.price > largest.price {
+            if let obj = c_item as? ForeignStockHolding {
+                if let largest = l_obj as? ForeignStockHolding{
+                    if obj.valueInDollars() > largest.valueInDollars() {
+                        l_obj = obj
+                    }
+                } else if let largest = l_obj as? StockHolding{
+                    if obj.valueInDollars() > largest.valueInDollars() {
+                        l_obj = obj
+                    }
+                }
+            } else if let obj = c_item as? StockHolding {
+                if let largest = l_obj as? ForeignStockHolding{
+                    if obj.valueInDollars() > largest.valueInDollars() {
+                        l_obj = obj
+                    }
+                } else if let largest = l_obj as? StockHolding{
+                    if obj.valueInDollars() > largest.valueInDollars() {
                         l_obj = obj
                     }
                 }
@@ -175,9 +216,23 @@ class Menu {
         print("\n|||||||||||||||||||||||||||||||||||||||||||||")
         var s_obj = store[0]
         for c_item in store{
-            if let obj = c_item as? StockHolding {
-                if let smallest = s_obj as? StockHolding{
-                    if obj.price < smallest.price {
+            if let obj = c_item as? ForeignStockHolding {
+                if let smallest = s_obj as? ForeignStockHolding{
+                    if obj.valueInDollars() < smallest.valueInDollars() {
+                        s_obj = obj
+                    }
+                } else if let smallest = s_obj as? StockHolding{
+                    if obj.valueInDollars() < smallest.valueInDollars() {
+                        s_obj = obj
+                    }
+                }
+            } else if let obj = c_item as? StockHolding {
+                if let smallest = s_obj as? ForeignStockHolding{
+                    if obj.valueInDollars() < smallest.valueInDollars() {
+                        s_obj = obj
+                    }
+                } else if let smallest = s_obj as? StockHolding{
+                    if obj.valueInDollars() < smallest.valueInDollars() {
                         s_obj = obj
                     }
                 }
@@ -217,10 +272,20 @@ class Menu {
         while cur_arr.count > 0 {
             var pointer = 0
             for idx in cur_arr {
-                if let obj = store[idx] as? StockHolding {
-                    if let test_obj = store[pointer] as? StockHolding {
+                if let obj = store[idx] as? ForeignStockHolding {
+                    if let test_obj = store[pointer] as? ForeignStockHolding {
                         if by == "price" {
-                            if obj.price < test_obj.price {
+                            if obj.valueInDollars() < test_obj.valueInDollars() {
+                                pointer = idx
+                            }
+                        } else if by == "name" {
+                            if obj.name.caseInsensitiveCompare(test_obj.name) == ((asc!) ? .orderedAscending : .orderedDescending) {
+                                pointer = idx
+                            }
+                        }
+                    } else if let test_obj = store[pointer] as? StockHolding {
+                        if by == "price" {
+                            if obj.valueInDollars() < test_obj.valueInDollars() {
                                 pointer = idx
                             }
                         } else if by == "name" {
@@ -229,8 +294,29 @@ class Menu {
                             }
                         }
                     }
-                }
-            }
+                } else if let obj = store[idx] as? ForeignStockHolding {
+                    if let test_obj = store[pointer] as? ForeignStockHolding {
+                        if by == "price" {
+                            if obj.valueInDollars() < test_obj.valueInDollars() {
+                                pointer = idx
+                            }
+                        } else if by == "name" {
+                            if obj.name.caseInsensitiveCompare(test_obj.name) == ((asc!) ? .orderedAscending : .orderedDescending) {
+                                pointer = idx
+                            }
+                        }
+                    } else if let test_obj = store[pointer] as? StockHolding {
+                        if by == "price" {
+                            if obj.valueInDollars() < test_obj.valueInDollars() {
+                                pointer = idx
+                            }
+                        } else if by == "name" {
+                            if obj.name.caseInsensitiveCompare(test_obj.name) == ((asc!) ? .orderedAscending : .orderedDescending) {
+                                pointer = idx
+                            }
+                        }
+                    }
+                }            }
             sorted_arr.add(store[cur_arr[pointer]])
             cur_arr.remove(at: pointer)
         }
