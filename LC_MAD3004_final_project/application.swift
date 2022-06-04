@@ -12,24 +12,24 @@ class Application {
         self.flag = true
         // Initialize the store with some data
         store = [
-            StockHolding(name: "A", price: 10.0, p_price: 8.0, holding: 5),
-            StockHolding(name: "B", price: 8.0, p_price: 8.0, holding: 5),
-            StockHolding(name: "C", price: 10.0, p_price: 8.0, holding: 5),
-            StockHolding(name: "D", price: 5.0, p_price: 20.0, holding: 5),
-            StockHolding(name: "E", price: 4.5, p_price: 8.0, holding: 5),
-            StockHolding(name: "F", price: 8.0, p_price: 8.0, holding: 5),
-            StockHolding(name: "G", price: 9.0, p_price: 8.0, holding: 5),
-            StockHolding(name: "H", price: 11.0, p_price: 8.0, holding: 5),
-            StockHolding(name: "I", price: 12.0, p_price: 8.0, holding: 5),
-            StockHolding(name: "J", price: 13.0, p_price: 8.0, holding: 5),
+            StockHolding(name: "Bank of Montreal", price: 10.0, p_price: 8.0, holding: 5),
+            StockHolding(name: "Bank of Nova Scotia", price: 8.0, p_price: 8.0, holding: 5),
+            StockHolding(name: "Barrick Gold", price: 10.0, p_price: 8.0, holding: 5),
+            StockHolding(name: "Aecon Group", price: 5.0, p_price: 20.0, holding: 5),
+            StockHolding(name: "CAE Inc", price: 4.5, p_price: 8.0, holding: 5),
+            StockHolding(name: "Cameco", price: 8.0, p_price: 8.0, holding: 5),
+            StockHolding(name: "Dollarama", price: 9.0, p_price: 8.0, holding: 5),
+            StockHolding(name: "Enerplus", price: 11.0, p_price: 8.0, holding: 5),
+            StockHolding(name: "Gibson Energy", price: 12.0, p_price: 8.0, holding: 5),
+            StockHolding(name: "Maple Leaf Foods", price: 13.0, p_price: 8.0, holding: 5)
         ]
         
 //        sortArray(asc:true)
                 
         // add more data too the store
-        store.add(ForeignStockHolding(name: "K", price: 10.0, p_price: 8.0, holding: 5, rate: 39.0))
-        store.add(ForeignStockHolding(name: "L", price: 10.0, p_price: 8.0, holding: 5, rate: 39.0))
-        store.add(ForeignStockHolding(name: "M", price: 1.0, p_price: 0.5, holding: 5, rate: 39.0))
+        store.add(ForeignStockHolding(name: "Microsoft Corporation Common", price: 10.0, p_price: 8.0, holding: 5, rate: 39.0))
+        store.add(ForeignStockHolding(name: "Alphabet Inc.", price: 10.0, p_price: 8.0, holding: 5, rate: 39.0))
+        store.add(ForeignStockHolding(name: "NVIDIA Corporation", price: 1.0, p_price: 0.5, holding: 5, rate: 39.0))
         
 //        sortArray(asc:false)
     }
@@ -74,7 +74,7 @@ class Application {
     
     func sortArray(asc flag: Bool) {
         let menu = Menu()
-        menu.get_sorted_stock(by: "name", asc: flag)
+        menu.get_sorted_stock(asc: flag)
     }
     
     func exit() {
