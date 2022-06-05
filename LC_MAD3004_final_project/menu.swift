@@ -12,7 +12,7 @@ class Menu {
             print("|||||||||||||||||||||||||||||||||||||||||||||")
             print("||                  Menu                   ||")
             print("|||||||||||||||||||||||||||||||||||||||||||||")
-            print("\nChoose An task you want to perform: ")
+            print("\nChoose a task you want to perform: ")
             print("1. Display stock information with the lowest value")
             print("2. Display stock with the highest value")
             print("3. Display the most profitable stock")
