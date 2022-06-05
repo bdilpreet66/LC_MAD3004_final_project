@@ -27,7 +27,7 @@ class NewShare {
                                 print("No of Shares: ")
                                 let amount = readLine()
                                 if let int_amount = Int(amount!){
-                                    print("Is th price in local curreny[y] or not[n]")
+                                    print("Is the price in local curreny[y] or not[n]")
                                     let choice = readLine()
                                     if choice == "y" {
                                         save_stock(name,double_price,double_p_price,int_amount)
@@ -53,7 +53,7 @@ class NewShare {
                                     }
                                 } else {
                                     print("|||||||||||||||||||||||||||||||||||||||||||||")
-                                    print("||         Amount must be a integer        ||")
+                                    print("||         Amount must be an integer        ||")
                                     //continue
                                 }
                             } else {

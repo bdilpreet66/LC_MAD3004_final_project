@@ -83,18 +83,18 @@ class Menu {
             print("Name: \(obj.name)")
             print("Share price: \(obj.price)")
             print("Purchasing price: \(obj.p_price)")
-            print("total shares: \(obj.holding)")
-            print("Cost In Dollars: \(obj.costInDollars())")
-            print("Value In Dollars: \(obj.valueInDollars())")
+            print("Total shares: \(obj.holding)")
+            print("Cost in Dollars: \(obj.costInDollars())")
+            print("Value in Dollars: \(obj.valueInDollars())")
         } else {
             if let obj = s_obj as? StockHolding {
                 print("The least profitable share is: ")
                 print("Name: \(obj.name)")
                 print("Share price: \(obj.price)")
                 print("Purchasing price: \(obj.p_price)")
-                print("total shares: \(obj.holding)")
-                print("Cost In Dollars: \(obj.costInDollars())")
-                print("Value In Dollars: \(obj.valueInDollars())")
+                print("Total shares: \(obj.holding)")
+                print("Cost in Dollars: \(obj.costInDollars())")
+                print("Value in Dollars: \(obj.valueInDollars())")
             }
         }
         print("|||||||||||||||||||||||||||||||||||||||||||||")
@@ -138,18 +138,18 @@ class Menu {
             print("Name: \(obj.name)")
             print("Share price: \(obj.price)")
             print("Purchasing price: \(obj.p_price)")
-            print("total shares: \(obj.holding)")
-            print("Cost In Dollars: \(obj.costInDollars())")
-            print("Value In Dollars: \(obj.valueInDollars())")
+            print("Total shares: \(obj.holding)")
+            print("Cost in Dollars: \(obj.costInDollars())")
+            print("Value in Dollars: \(obj.valueInDollars())")
         } else {
             if let obj = l_obj as? StockHolding {
                 print("The most profitable share is: ")
                 print("Name: \(obj.name)")
                 print("Share price: \(obj.price)")
                 print("Purchasing price: \(obj.p_price)")
-                print("total shares: \(obj.holding)")
-                print("Cost In Dollars: \(obj.costInDollars())")
-                print("Value In Dollars: \(obj.valueInDollars())")
+                print("Total shares: \(obj.holding)")
+                print("Cost in Dollars: \(obj.costInDollars())")
+                print("Value in Dollars: \(obj.valueInDollars())")
             }
         }
         print("|||||||||||||||||||||||||||||||||||||||||||||")
@@ -190,18 +190,18 @@ class Menu {
             print("Name: \(obj.name)")
             print("Share price: \(obj.price)")
             print("Purchasing price: \(obj.p_price)")
-            print("total shares: \(obj.holding)")
-            print("Cost In Dollars: \(obj.costInDollars())")
-            print("Value In Dollars: \(obj.valueInDollars())")
+            print("Total shares: \(obj.holding)")
+            print("Cost in Dollars: \(obj.costInDollars())")
+            print("Value in Dollars: \(obj.valueInDollars())")
         } else {
             if let obj = l_obj as? StockHolding {
                 print("The share with the highest value is: ")
                 print("Name: \(obj.name)")
                 print("Share price: \(obj.price)")
                 print("Purchasing price: \(obj.p_price)")
-                print("total shares: \(obj.holding)")
-                print("Cost In Dollars: \(obj.costInDollars())")
-                print("Value In Dollars: \(obj.valueInDollars())")
+                print("Total shares: \(obj.holding)")
+                print("Cost in Dollars: \(obj.costInDollars())")
+                print("Value in Dollars: \(obj.valueInDollars())")
             }
         }
         print("|||||||||||||||||||||||||||||||||||||||||||||")
@@ -243,7 +243,7 @@ class Menu {
             print("Name: \(obj.name)")
             print("Share price: \(obj.price)")
             print("Purchasing price: \(obj.p_price)")
-            print("total shares: \(obj.holding)")
+            print("Total shares: \(obj.holding)")
             print("Cost In Dollars: \(obj.costInDollars())")
             print("Value In Dollars: \(obj.valueInDollars())")
         } else {
@@ -252,9 +252,9 @@ class Menu {
                 print("Name: \(obj.name)")
                 print("Share price: \(obj.price)")
                 print("Purchasing price: \(obj.p_price)")
-                print("total shares: \(obj.holding)")
-                print("Cost In Dollars: \(obj.costInDollars())")
-                print("Value In Dollars: \(obj.valueInDollars())")
+                print("Total shares: \(obj.holding)")
+                print("Cost in Dollars: \(obj.costInDollars())")
+                print("Value in Dollars: \(obj.valueInDollars())")
             }
         }
         print("|||||||||||||||||||||||||||||||||||||||||||||")
@@ -306,18 +306,18 @@ class Menu {
                 print("Name: \(obj.name)")
                 print("Share price: \(obj.price)")
                 print("Purchasing price: \(obj.p_price)")
-                print("total shares: \(obj.holding)")
-                print("Cost In Dollars: \(obj.costInDollars())")
-                print("Value In Dollars: \(obj.valueInDollars())")
+                print("Total shares: \(obj.holding)")
+                print("Cost in Dollars: \(obj.costInDollars())")
+                print("Value in Dollars: \(obj.valueInDollars())")
             } else {
                 if let obj = item as? StockHolding {
                     print("|||||||||||||||||||||||||||||||||||||||||||||")
                     print("Name: \(obj.name)")
                     print("Share price: \(obj.price)")
                     print("Purchasing price: \(obj.p_price)")
-                    print("total shares: \(obj.holding)")
-                    print("Cost In Dollars: \(obj.costInDollars())")
-                    print("Value In Dollars: \(obj.valueInDollars())")
+                    print("Total shares: \(obj.holding)")
+                    print("Cost in Dollars: \(obj.costInDollars())")
+                    print("Value in Dollars: \(obj.valueInDollars())")
                 }
             }
         }
@@ -349,9 +349,9 @@ class Menu {
                         print("Name: \(obj.name)")
                         print("Share price: \(obj.price)")
                         print("Purchasing price: \(obj.p_price)")
-                        print("total shares: \(obj.holding)")
-                        print("Cost In Dollars: \(obj.costInDollars())")
-                        print("Value In Dollars: \(obj.valueInDollars())")
+                        print("Total shares: \(obj.holding)")
+                        print("Cost in Dollars: \(obj.costInDollars())")
+                        print("Value in Dollars: \(obj.valueInDollars())")
                     }
                 } else if let obj = item as? StockHolding {
                     if obj.name == name {
@@ -359,9 +359,9 @@ class Menu {
                         print("Name: \(obj.name)")
                         print("Share price: \(obj.price)")
                         print("Purchasing price: \(obj.p_price)")
-                        print("total shares: \(obj.holding)")
-                        print("Cost In Dollars: \(obj.costInDollars())")
-                        print("Value In Dollars: \(obj.valueInDollars())")
+                        print("Total shares: \(obj.holding)")
+                        print("Cost in Dollars: \(obj.costInDollars())")
+                        print("Value in Dollars: \(obj.valueInDollars())")
                     }
                 }
             }
