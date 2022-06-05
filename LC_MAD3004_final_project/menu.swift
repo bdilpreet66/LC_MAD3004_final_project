@@ -337,6 +337,9 @@ class Menu {
         }
         
         sorted_arr.sort()
+        if !asc {
+            sorted_arr.reverse()
+        }
         
         for name in sorted_arr {
             for item in store {

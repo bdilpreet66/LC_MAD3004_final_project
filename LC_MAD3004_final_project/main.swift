@@ -14,3 +14,4 @@ var store : NSMutableArray // contains the data for the app and is accessable gl
 let app = Application()
 // run the app
 app.run()
+
